@@ -8,6 +8,7 @@ import {
   rows,
   hasParentRows,
 }  from './data'
+import NestedAsJoin from "./components/NestedAsJoin"
 
 export default function App() {
   return (
@@ -51,6 +52,19 @@ export default function App() {
             </Card>
             <Card variant="outlined">
               <NestedAsGap rows={hasParentRows} />
+            </Card>
+          </Stack>
+        </Box>
+        <Box>
+          <Typography variant="h4" mb={4}>
+            結合を使った階層化
+          </Typography>
+          <Stack gap={4}>
+            <Card variant="outlined">
+              <NestedAsJoin rows={rows} />
+            </Card>
+            <Card variant="outlined">
+              <NestedAsJoin rows={hasParentRows} />
             </Card>
           </Stack>
         </Box>
